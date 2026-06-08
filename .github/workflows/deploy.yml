@@ -1,0 +1,34 @@
+name: Deploy ERPNext SGAT
+
+on:
+  push:
+    branches:
+      - version-15
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull latest code
+        working-directory: /home/frappesgatadmin/frappe-bench/apps/erpnext
+        run: |
+          git fetch origin
+          git reset --hard origin/version-15
+
+      - name: Run migrate
+        working-directory: /home/frappesgatadmin/frappe-bench
+        run: |
+          ./env/bin/python -m frappe.utils.bench_helper bench \
+            --site site1.local migrate
+
+      - name: Build assets
+        working-directory: /home/frappesgatadmin/frappe-bench
+        run: |
+          ./env/bin/python -m frappe.utils.bench_helper bench build \
+            --app erpnext
+
+      - name: Restart bench
+        working-directory: /home/frappesgatadmin/frappe-bench
+        run: |
+          bench restart || true
