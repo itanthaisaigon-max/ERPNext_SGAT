@@ -13,7 +13,7 @@ jobs:
       - name: Pull latest code
         working-directory: /home/frappesgatadmin/frappe-bench/apps/erpnext
         run: |
-          git fetch origin
+          git fetch origin --depth=1
           git reset --hard origin/version-15
 
       - name: Run migrate
