@@ -19,14 +19,12 @@ jobs:
       - name: Run migrate
         working-directory: /home/frappesgatadmin/frappe-bench
         run: |
-          ./env/bin/python -m frappe.utils.bench_helper bench \
-            --site site1.local migrate
+          bench --site site1.local migrate
 
       - name: Build assets
         working-directory: /home/frappesgatadmin/frappe-bench
         run: |
-          ./env/bin/python -m frappe.utils.bench_helper bench build \
-            --app erpnext
+          bench build --app erpnext
 
       - name: Restart bench
         working-directory: /home/frappesgatadmin/frappe-bench
