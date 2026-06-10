@@ -17,3 +17,7 @@ __pycache__
 .vscode/
 node_modules/
 .backportrc.json
+.claude
+.omx
+AGENTS.MD
+CLAUDE.MD   
