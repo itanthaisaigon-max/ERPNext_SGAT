@@ -46,7 +46,11 @@ doctype_list_js = {
 
 override_doctype_class = {"Address": "erpnext.accounts.custom.address.ERPNextAddress"}
 
-override_whitelisted_methods = {"frappe.www.contact.send_message": "erpnext.templates.utils.send_message"}
+override_whitelisted_methods = {
+	"frappe.www.contact.send_message": "erpnext.templates.utils.send_message",
+	"login": "erpnext.auth.login",
+	"frappe.auth.login": "erpnext.auth.login",
+}
 
 welcome_email = "erpnext.setup.utils.welcome_email"
 
