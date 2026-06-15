@@ -1,0 +1,32 @@
+[
+ {
+  "button_gradients": 0,
+  "button_rounded_corners": 0,
+  "button_shadows": 1,
+  "custom": 1,
+  "custom_scss": "@import url(\"/assets/erpnext/css/themes/sgat_neo_base.css\");\n@import url(\"/assets/erpnext/css/themes/sgat_neo_light.css\");",
+  "docstatus": 0,
+  "doctype": "Website Theme",
+  "font_properties": "wght@400;500;600;700;800",
+  "idx": 0,
+  "js": "(function () {\n  var base = \"/assets/erpnext/images/sgat_logo_NEO\";\n  function upsertIcon(rel, href, sizes, type) {\n    var selector = 'link[rel=\"' + rel + '\"]' + (sizes ? '[sizes=\"' + sizes + '\"]' : '');\n    var node = document.head.querySelector(selector);\n    if (!node) {\n      node = document.createElement(\"link\");\n      node.rel = rel;\n      if (sizes) node.sizes = sizes;\n      document.head.appendChild(node);\n    }\n    node.href = href;\n    if (type) node.type = type;\n  }\n  upsertIcon(\"icon\", base + \"/favicon.ico\", null, \"image/x-icon\");\n  upsertIcon(\"icon\", base + \"/favicon-32x32.png\", \"32x32\", \"image/png\");\n  upsertIcon(\"icon\", base + \"/favicon-16x16.png\", \"16x16\", \"image/png\");\n  upsertIcon(\"apple-touch-icon\", base + \"/apple-touch-icon.png\", null, \"image/png\");\n})();",
+  "module": "Website",
+  "name": "SGAT Neo Light",
+  "theme": "SGAT Neo Light"
+ },
+ {
+  "button_gradients": 0,
+  "button_rounded_corners": 0,
+  "button_shadows": 1,
+  "custom": 1,
+  "custom_scss": "@import url(\"/assets/erpnext/css/themes/sgat_neo_base.css\");\n@import url(\"/assets/erpnext/css/themes/sgat_neo_dark.css\");",
+  "docstatus": 0,
+  "doctype": "Website Theme",
+  "font_properties": "wght@400;500;600;700;800",
+  "idx": 0,
+  "js": "(function () {\n  var base = \"/assets/erpnext/images/sgat_logo_NEO\";\n  function upsertIcon(rel, href, sizes, type) {\n    var selector = 'link[rel=\"' + rel + '\"]' + (sizes ? '[sizes=\"' + sizes + '\"]' : '');\n    var node = document.head.querySelector(selector);\n    if (!node) {\n      node = document.createElement(\"link\");\n      node.rel = rel;\n      if (sizes) node.sizes = sizes;\n      document.head.appendChild(node);\n    }\n    node.href = href;\n    if (type) node.type = type;\n  }\n  upsertIcon(\"icon\", base + \"/favicon.ico\", null, \"image/x-icon\");\n  upsertIcon(\"icon\", base + \"/favicon-32x32.png\", \"32x32\", \"image/png\");\n  upsertIcon(\"icon\", base + \"/favicon-16x16.png\", \"16x16\", \"image/png\");\n  upsertIcon(\"apple-touch-icon\", base + \"/apple-touch-icon.png\", null, \"image/png\");\n})();",
+  "module": "Website",
+  "name": "SGAT Neo Dark",
+  "theme": "SGAT Neo Dark"
+ }
+]

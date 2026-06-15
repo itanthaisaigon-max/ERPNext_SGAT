@@ -1,22 +1,56 @@
 body[data-path="login"] {
 	min-height: 100vh;
-	background:
-		linear-gradient(135deg, rgba(8, 24, 52, 0.64), rgba(0, 98, 106, 0.42)),
-		url("/assets/erpnext/images/sgat_logo_20y/login_bg.png") center center / cover no-repeat fixed;
-}
-
-body[data-path="login"] .page-card-head h4 {
-	color: #ffffff;
-	text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+	background-color: #e5e7eb;
+	background-image: 
+		linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+	background-size: 40px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 body[data-path="login"] .page-card {
-	background: rgba(255, 255, 255, 0.94);
-	border: 1px solid rgba(255, 255, 255, 0.36);
-	box-shadow: 0 24px 72px rgba(0, 0, 0, 0.24);
-	backdrop-filter: blur(10px);
+	background: #ffffff;
+	border: 4px solid #000000;
+	border-radius: 0;
+	box-shadow: 12px 12px 0 #000000;
+	padding: 2rem;
+	max-width: 400px;
+	width: 100%;
+}
+
+body[data-path="login"] .page-card-head h4 {
+	color: #000000;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 1.5rem;
+}
+
+body[data-path="login"] .form-control {
+	border: 2px solid #000000;
+	border-radius: 0;
+	font-weight: 700;
+}
+
+body[data-path="login"] .btn-login {
+	background: #A3E635;
+	border: 3px solid #000000;
+	border-radius: 0;
+	box-shadow: 4px 4px 0 #000000;
+	color: #000000;
+	font-weight: 900;
+	text-transform: uppercase;
+	transition: all 0.1s;
+}
+
+body[data-path="login"] .btn-login:active {
+	box-shadow: 0 0 0 #000000;
+	transform: translate(4px, 4px);
 }
 
 body[data-path="login"] .page-card-head .app-logo {
-	filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.26));
+	max-height: 60px;
+	margin-bottom: 1rem;
 }

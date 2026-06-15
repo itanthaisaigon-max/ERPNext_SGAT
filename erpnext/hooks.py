@@ -22,13 +22,10 @@ add_to_apps_screen = [
 
 develop_version = "15.x.x-develop"
 
-app_include_js = "erpnext.bundle.js"
-app_include_css = "erpnext.bundle.css"
+app_include_js = ["erpnext.bundle.js", "/assets/erpnext/js/sgat_neo_desk.js"]
+app_include_css = ["erpnext.bundle.css", "/assets/erpnext/css/themes/sgat_neo_desk.css"]
 web_include_js = "erpnext-web.bundle.js"
-web_include_css = [
-	"erpnext-web.bundle.css",
-	"/assets/erpnext/css/sgat_login.css",
-]
+web_include_css = "erpnext-web.bundle.css"
 email_css = "email_erpnext.bundle.css"
 
 doctype_js = {
@@ -54,6 +51,13 @@ override_whitelisted_methods = {
 	"login": "erpnext.auth.login",
 	"frappe.auth.login": "erpnext.auth.login",
 }
+
+fixtures = [
+	{
+		"dt": "Website Theme",
+		"filters": [["name", "in", ["SGAT Neo Light", "SGAT Neo Dark"]]],
+	},
+]
 
 welcome_email = "erpnext.setup.utils.welcome_email"
 

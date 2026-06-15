@@ -1,0 +1,204 @@
+body[data-path="login"] {
+	min-height: 100vh;
+	background:
+		radial-gradient(ellipse at 78% 62%, var(--sgat-coffee-fill) 0 2rem, transparent 2.08rem),
+		radial-gradient(ellipse at 78% 62%, transparent 0 1.9rem, var(--sgat-cup-line) 1.96rem 2.18rem, transparent 2.24rem),
+		radial-gradient(circle at 84% 62%, transparent 0 0.9rem, var(--sgat-cup-line) 0.96rem 1.12rem, transparent 1.18rem),
+		repeating-radial-gradient(ellipse at 16% 78%, var(--sgat-bean-row) 0 0.28rem, transparent 0.32rem 2.4rem),
+		linear-gradient(135deg, transparent 0 18%, var(--sgat-panel-a) 18% 34%, transparent 34% 100%),
+		linear-gradient(45deg, transparent 0 64%, var(--sgat-panel-b) 64% 78%, transparent 78% 100%),
+		linear-gradient(100deg, transparent 0 5%, var(--sgat-panel-c) 5% 12%, transparent 12% 100%),
+		repeating-linear-gradient(0deg, transparent 0 30px, var(--sgat-grid) 30px 32px),
+		repeating-linear-gradient(90deg, transparent 0 30px, var(--sgat-grid) 30px 32px),
+		linear-gradient(135deg, var(--sgat-login-bg-start), var(--sgat-login-bg-end));
+	color: var(--sgat-text);
+}
+
+body[data-path="login"]::before {
+	content: "SGAT COFFEE ERP";
+	position: fixed;
+	inset: 24px;
+	pointer-events: none;
+	border: 3px solid var(--sgat-ink);
+	box-shadow: 8px 8px 0 var(--sgat-primary);
+	color: var(--sgat-ink);
+	font-size: clamp(1.4rem, 6vw, 5.5rem);
+	font-weight: 900;
+	letter-spacing: 0;
+	line-height: 0.9;
+	padding: clamp(18px, 4vw, 48px);
+	text-transform: uppercase;
+	text-shadow: 4px 4px 0 var(--sgat-primary);
+	white-space: pre-line;
+	opacity: 0.34;
+	z-index: 0;
+}
+
+body[data-path="login"]::after {
+	content: "ROBUSTA  /  PHIN  /  ROAST";
+	position: fixed;
+	right: clamp(24px, 7vw, 112px);
+	bottom: clamp(32px, 10vh, 140px);
+	width: min(48vw, 520px);
+	min-height: clamp(72px, 11vw, 118px);
+	pointer-events: none;
+	background:
+		linear-gradient(90deg, var(--sgat-blue) 0 18px, transparent 18px calc(100% - 18px), var(--sgat-red) calc(100% - 18px)),
+		var(--sgat-accent);
+	border: 3px solid var(--sgat-ink);
+	border-radius: 4px;
+	box-shadow: 10px 10px 0 var(--sgat-primary);
+	color: var(--sgat-ink);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: clamp(0.68rem, 1.4vw, 1rem);
+	font-weight: 900;
+	letter-spacing: 0;
+	text-align: center;
+	transform: rotate(-3deg);
+	z-index: 0;
+}
+
+body[data-path="login"] .for-login::before {
+	content: "COFFEE OFFICIAL";
+	position: fixed;
+	left: clamp(18px, 5vw, 72px);
+	bottom: clamp(110px, 18vh, 210px);
+	width: min(38vw, 360px);
+	min-height: 90px;
+	pointer-events: none;
+	background:
+		linear-gradient(90deg, var(--sgat-ink) 0 16px, transparent 16px 100%),
+		repeating-linear-gradient(90deg, transparent 0 38px, var(--sgat-batch-tick) 38px 42px, transparent 42px 76px),
+		var(--sgat-quality-panel);
+	border: 3px solid var(--sgat-ink);
+	border-radius: 4px;
+	box-shadow: 9px 9px 0 var(--sgat-primary);
+	color: var(--sgat-ink);
+	display: flex;
+	align-items: center;
+	padding-left: 38px;
+	font-size: clamp(0.75rem, 1.4vw, 1rem);
+	font-weight: 900;
+	letter-spacing: 0;
+	text-transform: uppercase;
+	transform: rotate(2deg);
+	z-index: 0;
+}
+
+body[data-path="login"] .for-login::after {
+	content: "BATCH UI";
+	position: fixed;
+	top: clamp(96px, 16vh, 180px);
+	right: clamp(18px, 6vw, 86px);
+	pointer-events: none;
+	background: var(--sgat-label-bg);
+	border: 3px solid var(--sgat-ink);
+	border-radius: 4px;
+	box-shadow: 7px 7px 0 var(--sgat-ink);
+	color: var(--sgat-label-text);
+	font-size: clamp(0.68rem, 1.2vw, 0.9rem);
+	font-weight: 900;
+	letter-spacing: 0;
+	padding: 10px 14px;
+	text-transform: uppercase;
+	transform: rotate(4deg);
+	z-index: 0;
+}
+
+body[data-path="login"] > * {
+	position: relative;
+	z-index: 1;
+}
+
+body[data-path="login"] .page-card-head h4 {
+	color: var(--sgat-heading);
+	font-weight: 800;
+	text-shadow: var(--sgat-heading-shadow);
+	letter-spacing: 0;
+}
+
+body[data-path="login"] .page-card-head .app-logo {
+	content: url("/assets/erpnext/images/sgat_logo_NEO/sgat_logo_neo.svg");
+	width: 72px;
+	height: 72px;
+	object-fit: contain;
+	filter: drop-shadow(var(--sgat-logo-shadow));
+	background: var(--sgat-logo-plate);
+	border: 3px solid var(--sgat-ink);
+	border-radius: 6px;
+	padding: 8px;
+	box-shadow: 6px 6px 0 var(--sgat-ink);
+}
+
+body[data-path="login"] .page-card {
+	background: var(--sgat-card);
+	border: 3px solid var(--sgat-ink);
+	border-radius: 4px;
+	box-shadow: 12px 12px 0 var(--sgat-ink);
+	backdrop-filter: blur(8px);
+}
+
+body[data-path="login"] .form-control {
+	border: 2px solid var(--sgat-ink);
+	border-radius: 3px;
+	background: var(--sgat-input-bg);
+	color: var(--sgat-text);
+	box-shadow: 5px 5px 0 var(--sgat-shadow);
+}
+
+body[data-path="login"] .form-control:focus {
+	border-color: var(--sgat-primary);
+	box-shadow: 6px 6px 0 var(--sgat-ink);
+}
+
+body[data-path="login"] .btn-primary {
+	background: var(--sgat-primary);
+	border: 2px solid var(--sgat-ink);
+	border-radius: 3px;
+	color: var(--sgat-button-text);
+	box-shadow: 6px 6px 0 var(--sgat-ink);
+	font-weight: 800;
+}
+
+body[data-path="login"] .btn-primary:hover,
+body[data-path="login"] .btn-primary:focus {
+	background: var(--sgat-primary-strong);
+	border-color: var(--sgat-ink);
+	color: var(--sgat-button-text);
+	transform: translate(-1px, -1px);
+	box-shadow: 8px 8px 0 var(--sgat-ink);
+}
+
+body[data-path="login"] a {
+	color: var(--sgat-link);
+	font-weight: 700;
+	text-decoration-thickness: 2px;
+}
+
+body[data-path="login"] .login-divider {
+	color: var(--sgat-muted) !important;
+}
+
+@media (max-width: 767px) {
+	body[data-path="login"]::before {
+		inset: 12px;
+		font-size: 2rem;
+		opacity: 0.22;
+	}
+
+	body[data-path="login"]::after {
+		right: 18px;
+		bottom: 20px;
+		left: 18px;
+		width: auto;
+		min-height: 58px;
+		font-size: 0.62rem;
+	}
+
+	body[data-path="login"] .for-login::before,
+	body[data-path="login"] .for-login::after {
+		display: none;
+	}
+}
