@@ -28,5 +28,18 @@
   "module": "Website",
   "name": "SGAT Neo Dark",
   "theme": "SGAT Neo Dark"
+ },
+ {
+  "background_image": "/assets/erpnext/images/sgat_logo_20y/login_bg.png",
+  "banner_image": "/assets/erpnext/images/sgat_logo_20y/sgat_logo_20y.svg",
+  "custom": 1,
+  "custom_scss": "@import url(\"/assets/erpnext/css/themes/sgat_20y.css\");",
+  "docstatus": 0,
+  "doctype": "Website Theme",
+  "idx": 0,
+  "js": "(function () {\n  document.documentElement.setAttribute(\"data-sgat-theme\", \"20y\");\n  var base = \"/assets/erpnext/images/sgat_logo_20y\";\n  function upsertIcon(rel, href, sizes, type) {\n    var selector = 'link[rel=\"' + rel + '\"]' + (sizes ? '[sizes=\"' + sizes + '\"]' : '');\n    var node = document.head.querySelector(selector);\n    if (!node) {\n      node = document.createElement(\"link\");\n      node.rel = rel;\n      if (sizes) node.sizes = sizes;\n      document.head.appendChild(node);\n    }\n    node.href = href;\n    if (type) node.type = type;\n  }\n  upsertIcon(\"icon\", base + \"/favicon.ico\", null, \"image/x-icon\");\n})();",
+  "module": "Website",
+  "name": "SGAT-20Y",
+  "theme": "SGAT-20Y"
  }
 ]

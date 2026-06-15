@@ -4,7 +4,7 @@
 - Status: Draft
 - Last refreshed: 2026-06-12
 - Primary product surfaces: ERPNext login, website/portal theme, Desk foundation, List View, Form View, Report View.
-- Evidence reviewed: `erpnext/hooks.py`, `erpnext/startup/boot.py`, `erpnext/public/css/sgat_login.css`, `erpnext/public/css/themes/*`, `erpnext/public/js/sgat_neo_desk.js`, `erpnext/public/images/sgat_logo_20y/*`, `erpnext/public/images/sgat_logo_NEO/*`, Frappe `Website Theme` DocType, Frappe Desk theme switcher.
+- Evidence reviewed: `erpnext/hooks.py`, `erpnext/startup/boot.py`, `erpnext/public/css/sgat_login.css`, `erpnext/public/css/themes/*`, `erpnext/public/js/sgat_theme_manager.js`, `erpnext/public/images/sgat_logo_20y/*`, `erpnext/public/images/sgat_logo_NEO/*`, Frappe `Website Theme` DocType, Frappe Desk theme switcher.
 
 ## Brand
 - Personality: official coffee-house authority with bold neo-brutalist confidence.

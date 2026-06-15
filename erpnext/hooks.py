@@ -22,10 +22,10 @@ add_to_apps_screen = [
 
 develop_version = "15.x.x-develop"
 
-app_include_js = ["erpnext.bundle.js", "/assets/erpnext/js/sgat_neo_desk.js"]
+app_include_js = ["erpnext.bundle.js", "/assets/erpnext/js/sgat_theme_manager.js"]
 app_include_css = ["erpnext.bundle.css", "/assets/erpnext/css/themes/sgat_neo_desk.css"]
 web_include_js = "erpnext-web.bundle.js"
-web_include_css = "erpnext-web.bundle.css"
+web_include_css = ["erpnext-web.bundle.css", "/assets/erpnext/css/sgat_login.css?v=20260615-2"]
 email_css = "email_erpnext.bundle.css"
 
 doctype_js = {
@@ -55,7 +55,7 @@ override_whitelisted_methods = {
 fixtures = [
 	{
 		"dt": "Website Theme",
-		"filters": [["name", "in", ["SGAT Neo Light", "SGAT Neo Dark"]]],
+		"filters": [["name", "in", ["SGAT Neo Light", "SGAT Neo Dark", "SGAT-20Y"]]],
 	},
 ]
 
@@ -485,7 +485,7 @@ scheduler_events = {
 	],
 }
 
-email_brand_image = "assets/erpnext/images/sgat_logo_20y/sgat_logo_20y.png"
+email_brand_image = "assets/erpnext/images/erpnext-logo.png"
 
 default_mail_footer = """
 	<span>

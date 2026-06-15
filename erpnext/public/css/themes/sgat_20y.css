@@ -1,0 +1,146 @@
+/* 
+   SGAT-20Y Theme - Premium Login Page 
+   Style: Modern Heritage (Espresso & Gold)
+*/
+
+/* 1. Background with Ken Burns Effect */
+body[data-path="login"] {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #1a0f0a !important; /* Deep espresso base */
+}
+
+body[data-path="login"]::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("/assets/erpnext/images/sgat_logo_20y/login_bg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -2;
+	animation: kenBurns 20s infinite alternate ease-in-out;
+}
+
+/* Dark overlay for contrast */
+body[data-path="login"]::after {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		135deg, 
+		rgba(26, 15, 10, 0.85) 0%, 
+		rgba(26, 15, 10, 0.4) 50%, 
+		rgba(212, 175, 55, 0.1) 100%
+	);
+	z-index: -1;
+}
+
+/* 2. Login Card Styling */
+body[data-path="login"] .for-login {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+body[data-path="login"] .page-card {
+	background: rgba(255, 255, 255, 0.95);
+	border: none;
+	border-radius: 16px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+	padding: 40px !important;
+	max-width: 420px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	border-top: 5px solid #d4af37; /* SGAT Gold Accent */
+	animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Logo enhancement */
+body[data-path="login"] .page-card-head .app-logo {
+	max-height: 70px;
+	margin-bottom: 24px;
+	filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Typography */
+body[data-path="login"] .page-card-head h4 {
+	color: #4a342e;
+	font-weight: 800;
+	letter-spacing: -0.5px;
+	margin-bottom: 30px;
+}
+
+/* Form Controls */
+body[data-path="login"] .form-control {
+	background-color: #fcfaf7;
+	border: 1px solid #e0d6cc;
+	border-radius: 8px;
+	height: 45px;
+	transition: all 0.3s;
+}
+
+body[data-path="login"] .form-control:focus {
+	border-color: #d4af37;
+	box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+/* 3. Gold Button Styling */
+body[data-path="login"] .btn-primary {
+	background-color: #d4af37 !important;
+	border: none !important;
+	border-radius: 8px !important;
+	font-weight: 700 !important;
+	height: 45px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+	box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+}
+
+body[data-path="login"] .btn-primary:hover {
+	background-color: #c19b2e !important;
+	transform: translateY(-2px);
+	box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5) !important;
+}
+
+/* 4. Desk Branding for SGAT-20Y (Navbar) */
+html[data-sgat-theme="20y"] .navbar-home .app-logo {
+	content: url("/assets/erpnext/images/sgat_logo_20y/sgat_logo_20y.svg");
+	max-height: 28px;
+	width: auto;
+}
+
+/* ANIMATIONS */
+@keyframes kenBurns {
+	from { transform: scale(1); }
+	to { transform: scale(1.1); }
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive tweaks */
+@media (max-width: 575px) {
+	body[data-path="login"] .page-card {
+		margin: 20px;
+		padding: 30px !important;
+	}
+}
