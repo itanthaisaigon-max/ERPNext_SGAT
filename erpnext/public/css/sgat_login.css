@@ -7,149 +7,88 @@
 	src: url('/assets/frappe/css/fonts/inter/Inter-Regular.woff2') format('woff2');
 }
 
-body[data-path="login"] {
-	min-height: 100vh;
-	margin: 0;
-	background: #231517 !important; /* Vanta Dark Base */
-	font-family: 'Inter', sans-serif !important;
-	overflow-x: hidden;
+/* 1. Force Remove Background Image and fix Body */
+body[data-path="login"],
+body[data-path="login"]::before,
+body[data-path="login"]::after,
+body[data-path="login"] .page-container,
+body[data-path="login"] .page-content-wrapper {
+	background-image: none !important;
+	background-color: transparent !important;
 }
 
+body[data-path="login"] {
+	background-color: #07192f !important; /* Base color for Vanta */
+	margin: 0;
+	overflow: hidden;
+	font-family: 'Inter', sans-serif !important;
+}
+
+/* 2. Style the Login Card (The parent container) */
+body[data-path="login"] .page-content-wrapper {
+	min-height: 100vh !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 24px !important;
+	position: relative;
+	z-index: 1;
+}
+
+body[data-path="login"] section.for-login {
+	background: #ffffff !important;
+	padding: 40px !important;
+	border-radius: 24px !important;
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4) !important;
+	max-width: 450px;
+	width: 100%;
+	display: block !important;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+/* 3. Elements inside the Card */
+body[data-path="login"] .page-card-head {
+	margin-bottom: 24px !important;
+}
+
+body[data-path="login"] .app-logo {
+	max-height: 80px;
+	width: auto;
+	margin: 0 auto;
+	display: block;
+}
+
+body[data-path="login"] .login-content.page-card {
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+/* 4. Background Layer */
 body[data-path="login"] #sgat-login-vanta-bg {
 	position: fixed;
 	inset: 0;
 	width: 100vw;
 	height: 100vh;
-	z-index: -1; /* Move to background */
+	z-index: -1;
 	pointer-events: none;
 }
 
-body[data-path="login"]::before,
-body[data-path="login"]::after {
-	display: none !important; /* Remove any theme overlays */
-}
-
+/* 5. Clean up UI */
 body[data-path="login"] .navbar,
 body[data-path="login"] footer,
 body[data-path="login"] .web-footer {
 	display: none !important;
 }
 
-body[data-path="login"] .page-content-wrapper {
-	min-height: 100vh !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	padding: clamp(24px, 5vw, 56px) !important;
-	position: relative;
-	z-index: 1; /* Content above background */
-}
-
-body[data-path="login"] section.for-login {
-	width: min(960px, 100%) !important;
-	min-height: auto !important;
-	margin: clamp(24px, 4vw, 56px) auto !important;
-	padding: clamp(28px, 4vw, 48px) !important;
-	display: grid !important;
-	grid-template-columns: minmax(220px, 0.9fr) minmax(320px, 1.1fr) !important;
-	align-items: center !important;
-	justify-content: initial !important;
-	gap: clamp(28px, 5vw, 64px) !important;
-	background: #ffffff !important;
-	border-radius: 24px !important;
-	box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18) !important;
-}
-
-body[data-path="login"] section.for-login .page-card-head {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-}
-
-body[data-path="login"] section.for-login .page-card-head .app-logo {
-	max-width: min(220px, 70%);
-	max-height: none;
-	width: 100%;
-	height: auto;
-	object-fit: contain;
-}
-
-body[data-path="login"] section.for-login .page-card-head h4 {
-	margin-top: 24px;
-}
-
-body[data-path="login"] section.for-login .login-content.page-card {
-	width: 100%;
-	max-width: 400px;
-	margin: 0 auto;
-	padding: 45px 10px !important;
-	background: transparent !important;
-	border: 0 !important;
-	box-shadow: none !important;
-	animation: none !important;
-}
-
-body[data-path="login"] section.for-login .sign-up-message {
-	grid-column: 2;
-	margin: 0;
-}
-
-body[data-path="login"] section.for-login .form-control {
-	height: auto;
-	border: 0 !important;
-	border-radius: var(--border-radius-sm) !important;
-	background-color: var(--control-bg) !important;
-	box-shadow: none !important;
-	text-transform: none;
-	letter-spacing: 0;
-}
-
-body[data-path="login"] section.for-login .form-control:focus {
-	border: 0 !important;
-	background-color: var(--control-bg) !important;
-	box-shadow: var(--focus-default) !important;
-}
-
-body[data-path="login"] section.for-login .btn-primary {
-	height: auto;
-	border: 0 !important;
-	border-radius: var(--border-radius-sm) !important;
-	background: var(--btn-primary) !important;
-	box-shadow: none !important;
-	text-transform: none;
-	letter-spacing: 0;
-	transform: none !important;
-}
-
-body[data-path="login"] section.for-login .btn-primary:hover {
-	background: var(--btn-primary) !important;
-	box-shadow: none !important;
-	transform: none !important;
-}
-
-@media (max-width: 767px) {
-	body[data-path="login"] .page-content-wrapper {
-		padding: 18px !important;
-	}
-
+/* Mobile adjustments */
+@media (max-width: 575px) {
 	body[data-path="login"] section.for-login {
-		margin: 0 auto !important;
-		grid-template-columns: 1fr !important;
-		gap: 24px !important;
-		padding: 28px 20px !important;
-		border-radius: 18px !important;
-	}
-
-	body[data-path="login"] section.for-login .page-card-head .app-logo {
-		max-width: 160px;
-	}
-
-	body[data-path="login"] section.for-login .login-content.page-card {
-		max-width: 100%;
-		padding: 0 !important;
-	}
-
-	body[data-path="login"] section.for-login .sign-up-message {
-		grid-column: 1;
+		padding: 30px 20px !important;
+		margin: 15px !important;
 	}
 }
