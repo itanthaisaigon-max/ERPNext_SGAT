@@ -24,8 +24,8 @@ develop_version = "15.x.x-develop"
 
 app_include_js = ["erpnext.bundle.js", "/assets/erpnext/js/sgat_theme_manager.js"]
 app_include_css = ["erpnext.bundle.css", "/assets/erpnext/css/themes/sgat_neo_desk.css"]
-web_include_js = "erpnext-web.bundle.js"
-web_include_css = ["erpnext-web.bundle.css", "/assets/erpnext/css/sgat_login.css?v=20260616"]
+web_include_js = ["erpnext-web.bundle.js", "/assets/erpnext/js/sgat_login_vanta.js?v=force_refresh_1"]
+web_include_css = ["erpnext-web.bundle.css", "/assets/erpnext/css/sgat_login.css"]
 email_css = "email_erpnext.bundle.css"
 
 doctype_js = {
