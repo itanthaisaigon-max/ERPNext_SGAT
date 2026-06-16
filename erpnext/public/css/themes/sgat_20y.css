@@ -51,8 +51,17 @@ body[data-path="login"] .for-login {
 	min-height: 100vh;
 }
 
+/* Hide default navbar on login page */
+body[data-path="login"] .navbar {
+	display: none; /* Hide navbar on login page for a cleaner look */
+}
+
+body[data-path="login"] .page-container {
+	padding-top: 0 !important;
+}
+
 body[data-path="login"] .page-card {
-	background: rgba(255, 255, 255, 0.95);
+	background: #fdfaf7 !important;
 	border: none;
 	border-radius: 16px;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -74,10 +83,17 @@ body[data-path="login"] .page-card-head .app-logo {
 
 /* Typography */
 body[data-path="login"] .page-card-head h4 {
-	color: #4a342e;
+	font-size: 0 !important;
+}
+
+body[data-path="login"] .page-card-head h4::before {
+	content: "SAI GON AN THAI ERP";
+	color: #fbe7aa;
+	font-size: 26px !important;
 	font-weight: 800;
 	letter-spacing: -0.5px;
 	margin-bottom: 30px;
+	text-transform: uppercase;
 }
 
 /* Form Controls */
