@@ -1,7 +1,17 @@
+/* Fix broken Inter font path by pointing to absolute assets path */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/assets/frappe/css/fonts/inter/Inter-Regular.woff2') format('woff2');
+}
+
 body[data-path="login"] {
 	min-height: 100vh;
 	margin: 0;
-	background: #07192f !important; /* Vanta Dark Base */
+	background: #231517 !important; /* Vanta Dark Base */
+	font-family: 'Inter', sans-serif !important;
 	overflow-x: hidden;
 }
 
