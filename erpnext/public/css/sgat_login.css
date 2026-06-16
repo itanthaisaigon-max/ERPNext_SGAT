@@ -6,6 +6,12 @@ body[data-path="login"] {
 		url("/assets/erpnext/images/sgat_logo_20y/login_bg.png") center / cover no-repeat;
 }
 
+body[data-path="login"] .navbar,
+body[data-path="login"] footer,
+body[data-path="login"] .web-footer {
+	display: none !important;
+}
+
 body[data-path="login"] .page-content-wrapper {
 	min-height: 100vh !important;
 	display: flex !important;
