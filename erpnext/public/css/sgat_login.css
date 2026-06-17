@@ -24,39 +24,48 @@ body[data-path="login"] {
 	font-family: 'Inter', sans-serif !important;
 }
 
-/* 2. Style the Login Card (The parent container) */
+/* 2. Style the Login Card (Force Center) */
+body[data-path="login"] #page-login,
+body[data-path="login"] .page-content,
 body[data-path="login"] .page-content-wrapper {
-	min-height: 100vh !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	padding: 24px !important;
-	position: relative;
-	z-index: 1;
+	background: transparent !important;
+	border: none !important;
+	display: block !important;
+	width: 100vw !important;
+	height: 100vh !important;
+	margin: 0 !important;
+	padding: 0 !important;
 }
 
 body[data-path="login"] section.for-login {
+	position: fixed !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
 	background: #ffffff !important;
-	padding: 40px !important;
+	padding: 50px 40px !important; /* Tăng padding trên dưới để cân đối */
 	border-radius: 24px !important;
 	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4) !important;
-	max-width: 450px;
-	width: 100%;
-	display: block !important;
-	text-align: center;
-	position: relative;
-	z-index: 2;
+	max-width: 420px; /* Thu hẹp lại một chút để trông thanh thoát hơn */
+	width: 90% !important;
+	z-index: 1000 !important;
+	display: flex !important;
+	flex-direction: column !important; /* Ép Logo trên - Form dưới */
+	align-items: center !important;
+	justify-content: center !important;
 }
 
 /* 3. Elements inside the Card */
 body[data-path="login"] .page-card-head {
-	margin-bottom: 24px !important;
+	margin-bottom: 30px !important; /* Khoảng cách giữa Logo và Form */
+	width: 100%;
+	text-align: center;
 }
 
 body[data-path="login"] .app-logo {
-	max-height: 80px;
+	max-height: 90px; /* Tăng kích thước logo một chút */
 	width: auto;
-	margin: 0 auto;
+	margin: 0 auto !important;
 	display: block;
 }
 
@@ -66,6 +75,7 @@ body[data-path="login"] .login-content.page-card {
 	box-shadow: none !important;
 	padding: 0 !important;
 	margin: 0 !important;
+	width: 100% !important;
 }
 
 /* 4. Background Layer */
