@@ -36,11 +36,14 @@ body[data-path="login"] .page-card {
 	border: none;
 	border-radius: 24px !important;
 	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4) !important;
-	padding: 50px 40px !important;
+	padding: 30px 40px !important; /* Đồng bộ padding mới */
 	max-width: 420px;
 	width: 90% !important;
+	box-sizing: border-box !important;
+	max-height: calc(100vh - 48px) !important; /* Đồng bộ giới hạn chiều cao */
+	overflow-y: auto !important;
 	position: relative;
-	overflow: hidden;
+	overflow-x: hidden;
 	border-top: 5px solid #d4af37; /* SGAT Gold Accent */
 	animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 	display: flex !important;

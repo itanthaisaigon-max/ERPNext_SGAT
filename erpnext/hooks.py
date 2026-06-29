@@ -21,11 +21,18 @@ add_to_apps_screen = [
 ]
 
 develop_version = "15.x.x-develop"
+sgat_asset_version = "20260617_02"
 
 app_include_js = ["erpnext.bundle.js", "/assets/erpnext/js/sgat_theme_manager.js"]
 app_include_css = ["erpnext.bundle.css", "/assets/erpnext/css/themes/sgat_neo_desk.css"]
-web_include_js = ["erpnext-web.bundle.js", "/assets/erpnext/js/sgat_login_vanta.js?v=force_refresh_1"]
-web_include_css = ["erpnext-web.bundle.css", "/assets/erpnext/css/sgat_login.css?v=force_refresh_v3"]
+web_include_js = [
+	"erpnext-web.bundle.js",
+	f"/assets/erpnext/js/sgat_login_vanta.js?v={sgat_asset_version}",
+]
+web_include_css = [
+	"erpnext-web.bundle.css",
+	f"/assets/erpnext/css/sgat_login.css?v={sgat_asset_version}",
+]
 email_css = "email_erpnext.bundle.css"
 
 doctype_js = {

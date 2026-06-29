@@ -38,16 +38,20 @@ body[data-path="login"] .page-content-wrapper {
 }
 
 body[data-path="login"] section.for-login {
+	--sgat-login-card-gap-total: clamp(48px, 10vh, 112px);
 	position: fixed !important;
 	top: 50% !important;
 	left: 50% !important;
 	transform: translate(-50%, -50%) !important;
 	background: #ffffff !important;
-	padding: 50px 40px !important; /* Tăng padding trên dưới để cân đối */
+	padding: 30px 40px !important; /* Giảm padding để thu nhỏ card */
 	border-radius: 24px !important;
 	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4) !important;
 	max-width: 420px; /* Thu hẹp lại một chút để trông thanh thoát hơn */
 	width: 90% !important;
+	box-sizing: border-box !important;
+	max-height: calc(100vh - var(--sgat-login-card-gap-total)) !important; /* Tạo khoảng trống Top/Bottom */
+	overflow-y: auto !important;
 	z-index: 1000 !important;
 	display: flex !important;
 	flex-direction: column !important; /* Ép Logo trên - Form dưới */
@@ -98,6 +102,7 @@ body[data-path="login"] .web-footer {
 /* Mobile adjustments */
 @media (max-width: 575px) {
 	body[data-path="login"] section.for-login {
+		--sgat-login-card-gap-total: 32px;
 		padding: 30px 20px !important;
 		margin: 15px !important;
 	}
